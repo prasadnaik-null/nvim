@@ -1,0 +1,2 @@
+-- git status (not working for somereason)
+-- vim.keymap.set("n", "<leader>gs", vim.cmd.Git);
