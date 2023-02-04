@@ -123,4 +123,7 @@ return require('packer').startup(function(use)
           {'nvim-lua/plenary.nvim'},
       }
   }
+
+  -- comment stuff out 
+  use 'tpope/vim-commentary'
 end)
