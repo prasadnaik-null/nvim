@@ -32,9 +32,11 @@ wk.register({
         g = {
             name = 'git',
             -- gitgutter
-            n = { '<CMD>GitGutterNextHunk<CR>', 'Goto next hunk' },
-            p = { '<CMD>GitGutterPreviousHunk<CR>', 'Goto previous hunk' },
-            e = { '<CMD>GitGutterPreviewHunk<CR>', 'Preview hunk' },
+            h = {
+                n = { '<CMD>GitGutterNextHunk<CR>', 'Goto next hunk' },
+                p = { '<CMD>GitGutterPreviousHunk<CR>', 'Goto previous hunk' },
+                e = { '<CMD>GitGutterPreviewHunk<CR>', 'Preview hunk' },
+            },
             -- fugitive
             s = { '<CMD>Git status<CR>', 'Git status' },
             a = { '<CMD>Git add .<CR>', 'Git add all' },
