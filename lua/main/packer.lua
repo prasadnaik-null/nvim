@@ -100,4 +100,7 @@ return require('packer').startup(function(use)
 
     -- Git changes otg : Git Gutter
     use 'airblade/vim-gitgutter'
+
+    -- Git commands inside nvim : fugitive
+    use 'tpope/vim-fugitive'
 end)
