@@ -41,13 +41,14 @@ wk.register({
             s = { '<CMD>Git status<CR>', 'Git status' },
             a = { '<CMD>Git add .<CR>', 'Git add all' },
             c = { '<CMD>Git commit<CR>', 'Git commit' },
-            d = { '<CMD>Git diff<CR>', 'Git diff' }
+            d = { '<CMD>Git diff<CR>', 'Git diff' },
+            g = { '<CMD>Git<CR>', 'Git Summary' },
         },
     },
     -- switch tabs
     ['<TAB>'] = {
-        ['<TAB>'] = { '<CMD>bp<CR>', 'Previous Tab' },
-        ['`'] = { '<CMD>bn<CR>', 'Net Tab' },
+        ['`'] = { '<CMD>bp<CR>', 'Previous Tab' },
+        ['<TAB>'] = { '<CMD>bn<CR>', 'Net Tab' },
     },
 })
 
