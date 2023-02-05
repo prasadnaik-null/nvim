@@ -1,10 +1,24 @@
--- Short hand
 local lsp = require('lsp-zero')
 
--- Recommended preset coz idk what this thing does much
+-- recommended preset coz idk what this thing does much
 lsp.preset('recommended')
 
--- Key bindings for auto completion
+lsp.ensure_installed({
+  'sumneko_lua',
+})
+
+-- Fix Undefined global 'vim'
+lsp.configure('lua', {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
+})
+
+-- key bindings for auto completion
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -13,14 +27,13 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<Enter>'] = cmp.mapping.confirm({ select = true }),
   ["C-y"] = cmp.mapping.complete(),
 })
+
 lsp.setup_nvim_cmp({
   mapping = cmp_mappings
 })
 
--- Run the presets (ig)
 lsp.setup()
 
--- Something related to errors
 vim.diagnostic.config({
     virtual_text = true
 })

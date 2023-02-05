@@ -57,6 +57,7 @@ opt.updatetime = 50
 o.breakindent = true
 
 -- highlight when yanked
+
 local highlight_group = api.nvim_create_augroup('YankHighlight', { clear = true })
 api.nvim_create_autocmd('TextYankPost', {
   callback = function()

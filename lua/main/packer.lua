@@ -1,129 +1,94 @@
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+-- ## ALL PACKER USED IN HERE
 
--- Automatically run :PackerCompile whenever plugins.lua is updated with an autocommand:
+-- ## Automatically run :PackerCompile whenever plugins.lua is updated with an autocommand:
 vim.api.nvim_create_autocmd('BufWritePost', {
     group = vim.api.nvim_create_augroup('PACKER', { clear = true }),
     pattern = 'plugins.lua',
-    command = 'source <afile> | PackerCompile',
+    command = 'source <afile> | PackerSync',
 })
 
--- main packer stuff here
+-- ## Main packer stuff here
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
-  -- telescope
-  use {
-  	'nvim-telescope/telescope.nvim', tag = '0.1.1',
-  	requires = { {'nvim-lua/plenary.nvim'} }
-  }
-
-  -- rose-pine theme
-  use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  require("rose-pine").setup()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  })
-
-  -- treesitter (i dont know what this thing does but apprently its way too op)
-  -- okay so the thing we use it for is syntax highlighting
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-
-  -- treesitter playground (not of much use to me but okay)
-  use ('nvim-treesitter/playground')
-
-  -- go to files fast
-  use ('ThePrimeagen/harpoon')
-
-  -- undotree
-  use ('mbbill/undotree')
-
-  -- for git stuff (idk why but not working)
-  -- use ('tpope/fugitive')
-
-  -- lsp
-  use {
-  'VonHeikemen/lsp-zero.nvim',
-  branch = 'v1.x',
-  requires = {
-    -- LSP Support
-    {'neovim/nvim-lspconfig'},             -- Required
-    {'williamboman/mason.nvim'},           -- Optional
-    {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp'},         -- Required
-    {'hrsh7th/cmp-nvim-lsp'},     -- Required
-    {'hrsh7th/cmp-buffer'},       -- Optional
-    {'hrsh7th/cmp-path'},         -- Optional
-    {'saadparwaiz1/cmp_luasnip'}, -- Optional
-    {'hrsh7th/cmp-nvim-lua'},     -- Optional
-
-    -- Snippet, branch = "release"s
-    {'L3MON4D3/LuaSnip'},             -- Required
-    {'rafamadriz/friendly-snippets'}, -- Optional
+    -- Fuzzy finder : Telescope
+    use {
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.1',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        }
     }
-  }
 
-  -- sml
-  use ('jez/vim-better-sml')
+    -- File browser : Telescope file browser
+    use 'nvim-telescope/telescope-file-browser.nvim'
 
-  -- better status bar 
-  use {
-      'nvim-lualine/lualine.nvim',
-      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+    -- Colour theme : Rose pine
+    use {
+        'rose-pine/neovim',
+        as = 'rose-pine',
+        config = function()
+            require("rose-pine").setup()
+            vim.cmd('colorscheme rose-pine')
+        end
+    }
 
-  -- auto closing brackets
-  use 'jiangmiao/auto-pairs'
+    -- Syntax highlighting : Treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
 
-  -- file manager
-  use {
-      'nvim-tree/nvim-tree.lua',
-      requires = {
-          'nvim-tree/nvim-web-devicons', -- optional, for file icons
-      },
-      tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
-      -- use { "nvim-telescope/telescope-file-browser.nvim" }
+    -- All undo's : Undotree
+    use 'mbbill/undotree'
 
-  -- startpage
-  use 'mhinz/vim-startify'
+    -- LSP : lsp-zero
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v1.x',
+        requires = {
+            -- LSP Support
+            'neovim/nvim-lspconfig',             -- Required
+            'williamboman/mason.nvim',           -- Optional
+            'williamboman/mason-lspconfig.nvim', -- Optional
 
-  -- tabs
-  use {
-      'kdheepak/tabline.nvim',
-      config = function()
-          require'tabline'.setup {enable = false}
-      end,
-      requires = {'hoob3rt/lualine.nvim', 'kyazdani42/nvim-web-devicons'}
-  }
+            -- Autocompletion
+            'hrsh7th/nvim-cmp',         -- Required
+            'hrsh7th/cmp-nvim-lsp',     -- Required
+            'hrsh7th/cmp-buffer',       -- Optional
+            'hrsh7th/cmp-path',         -- Optional
+            'saadparwaiz1/cmp_luasnip', -- Optional
+            'hrsh7th/cmp-nvim-lua',     -- Optional
 
-  -- org mode compatibility
-  use {'nvim-orgmode/orgmode', config = function()
-      require('orgmode').setup{}
-      require('orgmode').setup_ts_grammar{}
-      end
-  }
+            -- Snippet, branch = "release"s
+            'L3MON4D3/LuaSnip',             -- Required
+            'rafamadriz/friendly-snippets', -- Optional
+        }
+    }
 
-  -- indentation
-  use 'lukas-reineke/indent-blankline.nvim'
+    -- Better statusline : Lualine
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 
-  -- cheatsheet
-  use {
-      'sudormrfbin/cheatsheet.nvim',
+    -- Auto closing brackets : auto-pairs
+    use 'jiangmiao/auto-pairs'
 
-      requires = {
-          {'nvim-telescope/telescope.nvim'},
-          {'nvim-lua/popup.nvim'},
-          {'nvim-lua/plenary.nvim'},
-      }
-  }
+    -- Starup page : startify
+    use 'mhinz/vim-startify'
 
-  -- comment stuff out 
-  use 'tpope/vim-commentary'
+    -- Comment stuff out fast : vim - commentary
+    use 'tpope/vim-commentary'
+
+    -- File browser (better than telescope) : nvim tree
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+        },
+        tag = 'nightly'
+    }
+
 end)
