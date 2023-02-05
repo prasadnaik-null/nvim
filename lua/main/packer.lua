@@ -103,4 +103,7 @@ return require('packer').startup(function(use)
 
     -- Git commands inside nvim : fugitive
     use 'tpope/vim-fugitive'
+
+    -- Help with bracket and inverted commas : surround
+    use 'tpope/vim-surround'
 end)

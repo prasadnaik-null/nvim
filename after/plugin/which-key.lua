@@ -29,20 +29,22 @@ wk.register({
         },
         -- terminal
         t = { '<CMD>lua require("harpoon.term").gotoTerminal(1)<CR>', 'Open Terminal' },
+        -- git
         g = {
             name = 'git',
             -- gitgutter
             h = {
-                n = { '<CMD>GitGutterNextHunk<CR>', 'Goto next hunk' },
-                p = { '<CMD>GitGutterPreviousHunk<CR>', 'Goto previous hunk' },
-                e = { '<CMD>GitGutterPreviewHunk<CR>', 'Preview hunk' },
+                n = { '<CMD>GitGutterNextHunk<CR>', 'Goto Next Hunk' },
+                p = { '<CMD>GitGutterPrevHunk<CR>', 'Goto Previous Hunk' },
+                e = { '<CMD>GitGutterPreviewHunk<CR>', 'Preview Hunk' },
             },
             -- fugitive
-            s = { '<CMD>Git status<CR>', 'Git status' },
-            a = { '<CMD>Git add .<CR>', 'Git add all' },
-            c = { '<CMD>Git commit<CR>', 'Git commit' },
-            d = { '<CMD>Git diff<CR>', 'Git diff' },
+            s = { '<CMD>Git status<CR>', 'Git Status' },
+            a = { '<CMD>Git add .<CR>', 'Git Add All' },
+            c = { '<CMD>Git commit<CR>', 'Git Commit' },
+            d = { '<CMD>Git diff<CR>', 'Git Diff' },
             g = { '<CMD>Git<CR>', 'Git Summary' },
+            p = { '<CMD>Git push origin', 'Git Push' },
         },
     },
     -- switch tabs
