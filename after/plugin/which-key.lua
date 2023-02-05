@@ -1,8 +1,9 @@
 local wk = require('which-key')
 
 wk.register({
-    -- telescope
     ['<leader>'] = {
+        -- telescope
+        ['<leader>'] = { '<CMD>Telescope find_files<CR>', 'Find File' },
         f = {
             name = 'telescope',
             f = { '<CMD>Telescope find_files<CR>', 'Find File' },
@@ -10,10 +11,15 @@ wk.register({
             r = { '<CMD>Telescope oldfiles<CR>', 'Open Recent Files' },
             b = { '<CMD>Telescope file_browser hidden=true<CR>', 'File Browser' }
         },
+        -- undotree
         u = { '<CMD>UndotreeToggle<CR>', 'Open Undo Tree' },
+        -- save
         s = { '<CMD>w<CR>', 'Save' },
+        -- close tab
         w = { '<CMD>bd<CR>', 'Kill Buffer' },
+        -- nvim tree
         e = { '<CMD>NvimTreeT<CR>', 'Toggle Nvim Tree' },
+        -- harpoon
         h = {
             name = 'harpoon',
             a = { '<CMD>lua require("harpoon.mark").add_file()<CR>', 'Add File' },
@@ -21,8 +27,17 @@ wk.register({
             n = { '<CMD>lua require("harpoon.ui").nav_next()<CR>', 'Next File' },
             p = { '<CMD>lua require("harpoon.ui").nav_prev()<CR>', 'Previous File' },
         },
+        -- terminal
         t = { '<CMD>lua require("harpoon.term").gotoTerminal(1)<CR>', 'Open Terminal' },
+        -- gitgutter
+        g = {
+            name = 'gitgutter',
+            n = { '<CMD>GitGutterNextHunk<CR>', 'Goto next hunk' },
+            p = { '<CMD>GitGutterPreviousHunk<CR>', 'Goto previous hunk' },
+            e = { '<CMD>GitGutterPreviewHunk<CR>', 'Preview hunk' },
+        },
     },
+    -- switch tabs
     ['<TAB>'] = {
         ['<TAB>'] = { '<CMD>bp<CR>', 'Previous Tab' },
         ['`'] = { '<CMD>bn<CR>', 'Net Tab' },

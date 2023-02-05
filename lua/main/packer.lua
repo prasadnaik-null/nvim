@@ -95,6 +95,9 @@ return require('packer').startup(function(use)
     use 'folke/which-key.nvim'
 
 
-    -- go to files fast
-    use ('ThePrimeagen/harpoon')
+    -- Go to files fast : harpoon
+    use 'ThePrimeagen/harpoon'
+
+    -- Git changes otg : Git Gutter
+    use 'airblade/vim-gitgutter'
 end)
