@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/prasad/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  harpoon = {
+    loaded = true,
+    path = "/home/prasad/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/prasad/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -200,6 +205,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/prasad/.local/share/nvim/site/pack/packer/start/vim-startify",
     url = "https://github.com/mhinz/vim-startify"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/prasad/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 

@@ -91,4 +91,10 @@ return require('packer').startup(function(use)
         tag = 'nightly'
     }
 
+    -- Hints on the next key to press while using keymaps : which-key
+    use 'folke/which-key.nvim'
+
+
+    -- go to files fast
+    use ('ThePrimeagen/harpoon')
 end)

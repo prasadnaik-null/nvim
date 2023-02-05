@@ -56,6 +56,9 @@ opt.updatetime = 50
 -- if wrap then the next line will be indented as per the current line (and from the starting of the line)
 o.breakindent = true
 
+o.timeout = true
+o.timeoutlen = 300
+
 -- highlight when yanked
 local highlight_group = api.nvim_create_augroup('YankHighlight', { clear = true })
 api.nvim_create_autocmd('TextYankPost', {
