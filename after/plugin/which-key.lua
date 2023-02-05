@@ -44,8 +44,16 @@ wk.register({
             c = { '<CMD>Git commit<CR>', 'Git Commit' },
             d = { '<CMD>Git diff<CR>', 'Git Diff' },
             g = { '<CMD>Git<CR>', 'Git Summary' },
-            p = { '<CMD>Git push origin', 'Git Push' },
+            p = { ':Git push origin', 'Git Push' },
         },
+        -- tabs/buffers
+        b = {
+            name = 'buffers',
+            n = { '<CMD>bn<CR>', 'Net Tab' },
+            p = { '<CMD>bp<CR>', 'Previous Tab' },
+            k = { '<CMD>%bd|e#<CR>', 'Kill All but not Current' },
+            d = { '<CMD>bd<CR>', 'Kill Current' }
+        }
     },
     -- switch tabs
     ['<TAB>'] = {
