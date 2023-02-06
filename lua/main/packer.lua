@@ -106,4 +106,7 @@ return require('packer').startup(function(use)
 
     -- Help with bracket and inverted commas : surround
     use 'tpope/vim-surround'
+
+    -- SML for vim : SML
+    use 'jez/vim-better-sml'
 end)
