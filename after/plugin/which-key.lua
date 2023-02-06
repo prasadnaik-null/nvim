@@ -41,7 +41,7 @@ wk.register({
             },
             -- fugitive
             s = { '<CMD>Git status<CR>', 'Git Status' },
-            a = { '<CMD>Git add .<CR>', 'Git Add All' },
+            a = { '<CMD>exec "Root" | Git add .<CR>', 'Git Add All' },
             c = { '<CMD>Git commit<CR>', 'Git Commit' },
             d = { '<CMD>Git diff<CR>', 'Git Diff' },
             g = { '<CMD>Git<CR>', 'Git Summary' },
@@ -61,7 +61,7 @@ wk.register({
             o = { '<CMD>SMLReplBuild<CR>', 'Open Current File' },
             c = { '<CMD>SMLReplClear<CR>', 'Clear' },
         },
-        q = { '<CMD>q<CR>', 'Close Split/Quit' },
+        q = { '<CMD>exec "w" | q<CR>', 'Close Split/Quit' },
     },
     -- switch tabs
     ['<TAB>'] = {

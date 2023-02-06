@@ -175,6 +175,11 @@ _G.packer_plugins = {
     path = "/home/prasad/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["root.vim"] = {
+    loaded = true,
+    path = "/home/prasad/.local/share/nvim/site/pack/packer/start/root.vim",
+    url = "https://github.com/dylanaraps/root.vim"
+  },
   ["rose-pine"] = {
     config = { "\27LJ\2\ne\0\0\3\0\6\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\3\0009\0\4\0'\2\5\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\nsetup\14rose-pine\frequire\0" },
     loaded = true,
@@ -195,6 +200,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/prasad/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/home/prasad/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
   },
   ["vim-better-sml"] = {
     loaded = true,

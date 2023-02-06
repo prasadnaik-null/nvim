@@ -109,4 +109,10 @@ return require('packer').startup(function(use)
 
     -- SML for vim : SML
     use 'jez/vim-better-sml'
+
+    -- games to learn nvim : Vim be good
+    use 'ThePrimeagen/vim-be-good'
+
+    -- auto cd into current git main folder : root.vim
+    use 'dylanaraps/root.vim'
 end)
