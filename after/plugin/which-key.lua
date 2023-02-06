@@ -34,6 +34,7 @@ wk.register({
             name = 'git',
             -- gitgutter
             h = {
+                name = 'hunks',
                 n = { '<CMD>GitGutterNextHunk<CR>', 'Goto Next Hunk' },
                 p = { '<CMD>GitGutterPrevHunk<CR>', 'Goto Previous Hunk' },
                 e = { '<CMD>GitGutterPreviewHunk<CR>', 'Preview Hunk' },
@@ -52,8 +53,15 @@ wk.register({
             n = { '<CMD>bn<CR>', 'Net Tab' },
             p = { '<CMD>bp<CR>', 'Previous Tab' },
             k = { '<CMD>%bd|e#<CR>', 'Kill All but not Current' },
-            d = { '<CMD>bd<CR>', 'Kill Current' }
-        }
+            d = { '<CMD>bd<CR>', 'Kill Current' },
+        },
+        r = {
+            name = "SML REPL",
+            s = { '<CMD>SMLReplStart<CR>', 'Start' },
+            o = { '<CMD>SMLReplBuild<CR>', 'Open Current File' },
+            c = { '<CMD>SMLReplClear<CR>', 'Clear' },
+        },
+        q = { '<CMD>q<CR>', 'Close Split/Quit' },
     },
     -- switch tabs
     ['<TAB>'] = {
