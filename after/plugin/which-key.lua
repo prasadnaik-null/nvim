@@ -14,9 +14,7 @@ wk.register({
         -- undotree
         u = { '<CMD>UndotreeToggle<CR>', 'Open Undo Tree' },
         -- save
-        s = { '<CMD>w<CR>', 'Save' },
-        -- close tab
-        w = { '<CMD>bd<CR>', 'Kill Buffer' },
+        w = { '<CMD>w<CR>', 'Save' },
         -- nvim tree
         e = { '<CMD>NvimTreeT<CR>', 'Toggle Nvim Tree' },
         -- harpoon
@@ -46,6 +44,7 @@ wk.register({
             d = { '<CMD>Git diff<CR>', 'Git Diff' },
             g = { '<CMD>Git<CR>', 'Git Summary' },
             p = { ':Git push origin', 'Git Push' },
+            r = { '<CMD>Git restore --staged .<CR>', 'Restore all staged files' },
         },
         -- tabs/buffers
         b = {
@@ -55,13 +54,21 @@ wk.register({
             k = { '<CMD>%bd|e#<CR>', 'Kill All but not Current' },
             d = { '<CMD>bd<CR>', 'Kill Current' },
         },
-        r = {
+        -- sml
+        s = {
             name = "SML REPL",
             s = { '<CMD>SMLReplStart<CR>', 'Start' },
             o = { '<CMD>SMLReplBuild<CR>', 'Open Current File' },
             c = { '<CMD>SMLReplClear<CR>', 'Clear' },
         },
+        -- quit nvim using space coz : is a lot of work 
         q = { '<CMD>exec "w" | q<CR>', 'Close Split/Quit' },
+        -- show pwd
+        p = { '<CMD>pwd<CR>', 'Show present working directory' },
+        -- cd to root of current git
+        r = { '<CMD>Root<CR>', 'CD to root of current git' },
+        -- short hand to delete current buffer
+        d = { '<CMD>bd<CR>', 'Kill Current Buffer' },
     },
     -- switch tabs
     ['<TAB>'] = {
