@@ -115,4 +115,7 @@ return require('packer').startup(function(use)
 
     -- auto cd into current git main folder : root.vim
     use 'dylanaraps/root.vim'
+
+    -- racket
+    use 'wlangstroth/vim-racket'
 end)

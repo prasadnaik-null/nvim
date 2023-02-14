@@ -18,7 +18,7 @@ opt.mouse = "a"
 -- share clipboard b/w os and nvim
 opt.clipboard = "unnamedplus"
 
--- while searching the case you are searching will not be respected 
+-- while searching the case you are searching will not be respected
 opt.ignorecase = true
 
 -- tab lenght
@@ -66,9 +66,11 @@ vim.lsp.set_log_level("debug")
 -- highlight when yanked
 local highlight_group = api.nvim_create_augroup('YankHighlight', { clear = true })
 api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*',
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+    group = highlight_group,
+    pattern = '*',
 })
+
+vim.lsp.buf.format()

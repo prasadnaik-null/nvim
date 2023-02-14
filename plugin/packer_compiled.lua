@@ -226,6 +226,11 @@ _G.packer_plugins = {
     path = "/home/prasad/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
   },
+  ["vim-racket"] = {
+    loaded = true,
+    path = "/home/prasad/.local/share/nvim/site/pack/packer/start/vim-racket",
+    url = "https://github.com/wlangstroth/vim-racket"
+  },
   ["vim-startify"] = {
     loaded = true,
     path = "/home/prasad/.local/share/nvim/site/pack/packer/start/vim-startify",
