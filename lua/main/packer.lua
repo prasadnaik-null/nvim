@@ -117,5 +117,5 @@ return require('packer').startup(function(use)
     use 'dylanaraps/root.vim'
 
     -- racket
-    use 'wlangstroth/vim-racket'
+    use 'benknoble/vim-racket'
 end)

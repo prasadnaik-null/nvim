@@ -1,0 +1,6 @@
+gd -> go to defn
+gt -> go to type defn
+gr -> go to refrences
+K -> show info on the thing hovering
+dn -> diagnostics next
+dp -> diagnostics prev

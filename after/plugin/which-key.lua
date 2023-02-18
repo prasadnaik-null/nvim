@@ -5,7 +5,7 @@ wk.register({
         -- telescope
         ['<leader>'] = { '<CMD>Telescope find_files<CR>', 'Find File' },
         f = {
-            name = 'telescope',
+            name = 'Telescope',
             f = { '<CMD>Telescope find_files<CR>', 'Find File' },
             g = { '<CMD>Telescope live_grep<CR>', 'Live Grep' },
             r = { '<CMD>Telescope oldfiles<CR>', 'Open Recent Files' },
@@ -19,7 +19,7 @@ wk.register({
         e = { '<CMD>NvimTreeT<CR>', 'Toggle Nvim Tree' },
         -- harpoon
         h = {
-            name = 'harpoon',
+            name = 'Harpoon',
             a = { '<CMD>lua require("harpoon.mark").add_file()<CR>', 'Add File' },
             q = { '<CMD>lua require("harpoon.ui").toggle_quick_menu()<CR>', 'Open Quick Menu' },
             n = { '<CMD>lua require("harpoon.ui").nav_next()<CR>', 'Next File' },
@@ -29,10 +29,10 @@ wk.register({
         t = { '<CMD>lua require("harpoon.term").gotoTerminal(1)<CR>', 'Open Terminal' },
         -- git
         g = {
-            name = 'git',
+            name = 'Git',
             -- gitgutter
             h = {
-                name = 'hunks',
+                name = 'Hunks',
                 n = { '<CMD>GitGutterNextHunk<CR>', 'Goto Next Hunk' },
                 p = { '<CMD>GitGutterPrevHunk<CR>', 'Goto Previous Hunk' },
                 e = { '<CMD>GitGutterPreviewHunk<CR>', 'Preview Hunk' },
@@ -48,7 +48,7 @@ wk.register({
         },
         -- tabs/buffers
         b = {
-            name = 'buffers',
+            name = 'Buffers',
             n = { '<CMD>bn<CR>', 'Net Tab' },
             p = { '<CMD>bp<CR>', 'Previous Tab' },
             k = { '<CMD>%bd|e#<CR>', 'Kill All but not Current' },
@@ -68,8 +68,17 @@ wk.register({
         -- cd to root of current git
         r = { '<CMD>Root<CR>', 'CD to root of current git' },
         -- short hand to delete current buffer
-        d = { '<CMD>bd<CR>', 'Kill Current Buffer' },
-    },
+        k = { '<CMD>bd<CR>', 'Kill Current Buffer' },
+        -- lsp (just main tags)
+        l = { '<CMD>sp ~/.config/nvim/lsp_help.txt<CR>', 'Show LSP Commands' },
+        -- variable actions
+        v = {
+            name = 'Variable actions',
+            r = {
+                name = 'Extra step coz both start with "r"',
+            },
+        },
+},
     -- switch tabs
     ['<TAB>'] = {
         ['`'] = { '<CMD>bp<CR>', 'Previous Tab' },
