@@ -229,7 +229,7 @@ _G.packer_plugins = {
   ["vim-racket"] = {
     loaded = true,
     path = "/home/prasad/.local/share/nvim/site/pack/packer/start/vim-racket",
-    url = "https://github.com/wlangstroth/vim-racket"
+    url = "https://github.com/benknoble/vim-racket"
   },
   ["vim-startify"] = {
     loaded = true,

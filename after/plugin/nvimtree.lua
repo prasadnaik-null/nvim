@@ -7,26 +7,29 @@ vim.opt.termguicolors = true
 
 -- OR setup with some options
 require("nvim-tree").setup({
-  sort_by = "case_sensitive",
-  view = {
-    width = 30,
-    mappings = {
-      list = {
-        { key = "u", action = "dir_up" },
-      },
+    sort_by = "case_sensitive",
+    view = {
+        width = 30,
+        relativenumber = true,
+        number = true,
+        mappings = {
+            list = {
+                { key = "o", action = "dir_up" },
+                { key = "i", action = "dir_down" },
+            },
+        },
     },
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
-  actions = {
-    open_file = {
-      quit_on_open = true,
+    renderer = {
+        group_empty = true,
     },
-  },
+    filters = {
+        dotfiles = true,
+    },
+    actions = {
+        open_file = {
+            quit_on_open = true,
+        },
+    },
 })
 
 
