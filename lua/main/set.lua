@@ -62,7 +62,6 @@ o.timeoutlen = 300
 -- lsp debug
 vim.lsp.set_log_level("debug")
 
-
 -- highlight when yanked
 local highlight_group = api.nvim_create_augroup('YankHighlight', { clear = true })
 api.nvim_create_autocmd('TextYankPost', {
@@ -73,4 +72,4 @@ api.nvim_create_autocmd('TextYankPost', {
     pattern = '*',
 })
 
-vim.lsp.buf.format()
+-- vim.lsp.buf.format()
