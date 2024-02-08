@@ -25,14 +25,24 @@ return require('packer').startup(function(use)
     use 'nvim-telescope/telescope-file-browser.nvim'
 
     -- Colour theme : Rose pine
-    use {
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            require("rose-pine").setup()
-            vim.cmd('colorscheme rose-pine')
-        end
-    }
+    -- use {
+    --     'rose-pine/neovim',
+    --     as = 'rose-pine',
+    --     config = function()
+    --         require("rose-pine").setup()
+    --         vim.cmd('colorscheme rose-pine')
+    --     end
+    -- }
+
+    -- Color theme : flexkoi
+    -- use {
+    --     'kepano/flexoki-neovim',
+    --     as = 'flexkoi',
+    -- }
+
+    -- Theme : rasmus
+    use 'kvrohit/rasmus.nvim'
+    vim.cmd [[colorscheme rasmus]]
 
     -- Syntax highlighting : Treesitter
     use {
@@ -118,4 +128,11 @@ return require('packer').startup(function(use)
 
     -- Racket
     use 'benknoble/vim-racket'
+
+    -- interactive python files
+    -- use 'sillybun/vim-repl'
+    -- use 'jpalardy/vim-slime'
+    -- use 'chadvoegele/nvim-slime'
+    -- use 'untitled-ai/jupyter_ascending.vim'
+    use 'luk400/vim-jukit'
 end)

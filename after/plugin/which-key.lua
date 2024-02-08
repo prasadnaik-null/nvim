@@ -78,7 +78,27 @@ wk.register({
                 name = 'Extra step coz both start with "r"',
             },
         },
-},
+        -- jupyter
+        j = {
+            name = 'Jupyter',
+            p = { '<CMD>call jukit#convert#notebook_convert(g:jukit_notebook_viewer)<CR>', 'Convert to python' },
+            t = { '<CMD>call jukit#splits#output()<CR>', 'Open terminal split' },
+            s = {
+                name = 'Send to terminal',
+                l = { '<cmd>call jukit#send#line()<cr>', 'Send current line to terminal' },
+                c = { '<cmd>call jukit#send#section(0)<cr>', 'Send current cell to terminal' },
+                s = { '<cmd>call jukit#send#selection()<cr>', 'Send selection to terminal' },
+                a = { '<CMD>call jukit#send#all()<CR>', 'Send full code to terminal' },
+            },
+            c = {
+                name = 'Creating Cells',
+                a = { '<cmd>call jukit#cells#create_above(0)<cr>', 'Create code cell above' },
+                b = { '<cmd>call jukit#cells#create_below(0)<cr>', 'Create code cell below' },
+                u = { '<cmd>call jukit#cells#create_above(1)<cr>', 'Create markdown cell above' },
+                d = { '<cmd>call jukit#cells#create_below(1)<cr>', 'Create markdown cell below' },
+            },
+        },
+    },
     -- switch tabs
     ['<TAB>'] = {
         ['`'] = { '<CMD>bp<CR>', 'Previous Tab' },
